@@ -1,0 +1,33 @@
+html {
+    background-color: blue;
+}
+
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    gap: 20px;
+}
+
+#usuario, #password, #iniciarSesion, #registrarse {
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    
+}
+
+#iniciarSesion, #registrarse {
+    cursor: pointer;
+    background-color: lightgrey;
+    color: black;
+    border: none;
+    border-radius: 5px;
+
+}
+
+#contenedor, h1 {
+    color: white;
+    margin-bottom: 20px;
+}
