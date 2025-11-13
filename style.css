@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* #login {
+    margin: 5px;;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+#login div{
+    background-color: rgb(63, 63, 160);
+    border: 3px, solid, gray;
+    border-radius: 1%;
+    padding: 10px;
+}
+#login input{
+
+    display: flex;
+    justify-self: center;
+    width: 200px;
+    text-align: center;
+    margin-bottom: 5px;
+}
