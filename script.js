@@ -17,12 +17,18 @@ function cargarMenu() {
 
 }
 
+function registrarUsuario(){
+    window.location.href = '/NuevoRegistro.html'
+}
+
 async function cargarDatos(){
     const datos = await fetch('https://6913e692f34a2ff1170d7f79.mockapi.io/api/users');
     let dato = await datos.json();
     console.log(dato)
 }
-const btnLogin = document.getElementById('inputLogin');
+const btnLogin = document.getElementById('btnIniciarSesion');
 btnLogin.addEventListener('click', cargarMenu);
 
+const btnRegistrarse = document.getElementById('btnRegistrarse');
+btnRegistrarse.addEventListener('click',registrarUsuario);
 cargarDatos();
