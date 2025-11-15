@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="SolicitarTurno.css">
+    <script src="usuario.js" defer></script>
+
+    <title>SolicitarTurno</title>
 </head>
+
 <body>
-    
+    <section id="calendario-medico">
+
+        <div class="calendario">
+            <label for="fecha" id="fechas">Selecionar Fecha</label>
+            <input id="fecha" type="text" placeholder="Elegí un día">
+            <div>
+            <label class="horarios">
+                <input type="radio" name="opcion" value="1">
+                hora 1
+            </label>
+
+            <label class="horarios">
+                <input type="radio" name="opcion" value="2">
+                hora 2
+            </label>
+
+             <label class="horarios">
+                <input type="radio" name="opcion" value="3">
+                hora 4
+            </label >
+
+            <label class="horarios">
+                <input type="radio" name="opcion" value="4">
+                hora 4
+            </label >
+
+            <label class="horarios">
+                <input type="radio" name="opcion" value="5">
+                hora 5
+            </label>
+
+             <label class="horarios">
+                <input type="radio" name="opcion" value="6">
+                hora 6
+            </label>
+            </div>
+            <button class="boton" id="btnGuardar">Confirmar Turno</button>
+            
+        </div>
+
+        <div class="selecion-medico">
+            <label for="medico">Medico</label>
+            <select id="medico" name="medico">
+                <option value="" disabled selected>Elegir...</option>
+                <option value="medico1">mengeche</option>
+            </select>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
+
+
 </body>
+
 </html>

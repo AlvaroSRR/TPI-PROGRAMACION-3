@@ -1,0 +1,50 @@
+html {
+    background-color: blue;
+}
+
+
+.calendario {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#fecha {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.boton {
+    cursor: pointer;
+    background-color: lightgrey;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#calendario, label {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#calendario-medico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    gap: 50px;
+}
+
+#fechas {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
