@@ -20,6 +20,17 @@ form.addEventListener('submit', async (e) => {
 
     // enviar datos a la api
     try {
+        const controlEmail = await fetch('https://6913e692f34a2ff1170d7f79.mockapi.io/api/users?email=');
+        const usuariosExistentes = await controlEmail.json();
+
+        const emailYaRegistrado = usuariosExistentes.some(usuarios => usuarios.email === email);
+
+        if (emailYaRegistrado) {
+            alert('El email ya está registrado. Por favor, utilice otro email.');
+            return;
+        }
+
+
         const respuesta = await fetch('https://6913e692f34a2ff1170d7f79.mockapi.io/api/users', {
             method: 'POST',
             headers: {
