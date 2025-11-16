@@ -42,7 +42,7 @@ form.addEventListener('submit', async (e) => {
         });
 
         if (!respuesta.ok) {
-            throw new Error('Error al registrar el usuario');
+            alert('Error al registrar el usuario');
         }
 
         const datos = await respuesta.json();
