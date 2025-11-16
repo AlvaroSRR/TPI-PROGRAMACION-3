@@ -6,12 +6,14 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
     // crear objeto para la api
     const nuevoUsuario = {
         nombre: nombre,
+        apellido: apellido,
         email: email,
         password: password,
     };
