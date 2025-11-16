@@ -78,4 +78,3 @@ document.getElementById("btnGuardar").addEventListener("click", () => {
 
 
 //SOLICITARTURNO
-
