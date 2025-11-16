@@ -49,7 +49,7 @@ document.getElementById("btnGuardar").addEventListener("click", () => {
         return;
     }
 
-    alert(`Turno confirmado para el ${fechaSeleccionada} en el horario de ${horarioSeleccionado} con el médico ${medicoSeleccionado}`);
+    alert(`Turno confirmado para el ${fechaSeleccionada} en el horario de ${horarioSeleccionado} con el`);
     
 });
 
