@@ -1,50 +1,80 @@
-html {
-    background-color: blue;
-}
-
-
-.calendario {
-    width: 280px;
+body {
+    margin: 0;
+    padding: 0;
+    background: #eef2ff;
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#fecha {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+.contenedor {
+    background: #ffffff;
+    padding: 25px;
+    width: 350px;
+    border-radius: 12px;
 }
 
-.boton {
-    cursor: pointer;
-    background-color: lightgrey;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    width: 200px;
-    height: 30px;
-    font-size: 16px;
-    font-weight: bolder;
-}
-
-#calendario, label {
-    color: white;
+h1 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-#calendario-medico {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 150px;
-    gap: 50px;
+label {
+    font-weight: bold;
 }
 
-#fechas {
-    font-size: 20px;
-    font-weight: bold;
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 6px;
+    border: 1.5px solid #a48df0;
+    background: #faf8ff;
+    color: #6f4bc6;
+    font-size: 15px;
+}
+
+#horarios-container {
+    margin-bottom: 20px;
+}
+
+.horarios {
+    display: block;
+    padding: 8px;
+    border: 1px solid #d2c7ff;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.horarios input {
+    margin-right: 10px;
+}
+
+.boton {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #6d4df7;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.boton:hover {
+    background: #5338d0;
+}
+
+.cancelar {
+    background: #999;
+}
+
+.cancelar:hover {
+    background: #777;
 }
 
 

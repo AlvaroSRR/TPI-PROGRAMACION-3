@@ -64,29 +64,34 @@
 
     </section> -->
      <section id="calendario-medico">
-
         <div class="contenedor">
 
-            <h1>Solicitar Turno</h1>
+        <h2>Solicitar turno</h2>
 
-            <label for="especialidad">Especialidad</label>
-            <select id="especialidad">
-                <option value="" disabled selected>Elegir especialidad...</option>
-            </select>
+        <label for="especialidad">Especialidad</label>
+        <select id="especialidad">
+            <option value="" disabled selected>Elegir...</option>
+        </select>
 
-            <label for="medico">Médico</label>
-            <select id="medico" disabled>
-                <option value="" disabled selected>Elegir médico...</option>
-            </select>
+        <label for="medico">Médico</label>
+        <select id="medico" disabled>
+            <option value="" disabled selected>Elegir...</option>
+        </select>
 
-            <div id="horarios">
-                <p>Seleccioná un médico para ver horarios...</p>
-            </div>
+        <label for="dia">Día disponible</label>
+        <select id="dia" disabled>
+            <option value="" disabled selected>Elegir...</option>
+        </select>
 
-            <button class="boton" id="btnConfirmar">Confirmar Turno</button>
-            <button class="boton cancelar" id="btnCancelar">Cancelar</button>
+        <label for="hora">Horario</label>
+        <select id="hora" disabled>
+            <option value="" disabled selected>Elegir...</option>
+        </select>
 
-        </div>
+        <button class="boton" id="confirmarTurno" disabled>Confirmar Turno</button>
+        <button class="boton" id="cancelarTurno">Cancelar</button>
+
+    </div>
 
     </section>
 
