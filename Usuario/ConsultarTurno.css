@@ -1,0 +1,37 @@
+html {
+    background-color: blue;
+}
+
+h1 {
+    color: white;
+}
+
+#tablaTurnos {
+    width: 39%;
+    border-collapse: collapse;
+}
+
+#tablaTurnos th, #tablaTurnos td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+#tablaTurnos th, td {
+    background-color: lightgray;
+}
+
+#consultarTurno{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.boton {
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+ 

@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="ConsultarTurno.css">
+    <title>Consultar turno</title>
 </head>
+
 <body>
-    
+    <section id="consultarTurno">
+        <div class="contenedor">
+            <h1>Consultar Turno</h1>
+            <table id="tablaTurnos">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Especialidad</th>
+                        <th>Dia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Cardiologia</td>
+                        <td>20/06/2024</td>
+                        <td>
+                            <button onclick="cancelarTurno()">Cancelar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>09:00</td>
+                        <td>Cardiologia</td>
+                        <td>20/06/2024</td>
+                        <td>
+                            <button onclick="cancelarTurno()">Cancelar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="button" value="Volver" id="btnVolver" class="boton">
+        </div>
+
+
+            
+       
+    </section>
 </body>
+
 </html>
