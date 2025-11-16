@@ -2,7 +2,7 @@
 async function cargarMedicos() {
     const res = await fetch("https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor");
     const medicos = await res.json();
-    return medicos;
+    return (medicos);
 }
 
 //CARGAR MÉDICOS EN SELECT
@@ -78,3 +78,4 @@ document.getElementById("btnGuardar").addEventListener("click", () => {
 
 
 //SOLICITARTURNO
+
