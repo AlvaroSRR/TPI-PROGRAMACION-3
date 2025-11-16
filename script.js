@@ -36,13 +36,19 @@ async function cargarMenu() {
 
 }
 
-function menuUsuario(){
-    window.location.href= '/Usuario/MenuPaciente.html';
+function menuUsuario() {
+    window.location.href = '/Usuario/MenuPaciente.html';
 }
 
-function menuADM(){
-    window.location.href='/Admin/MenuAdmin.html';
+function menuADM() {
+    window.location.href = '/Admin/MenuAdmin.html';
 }
 
 const btnLogin = document.getElementById('btnIniciarSesion');
 btnLogin.addEventListener('click', cargarMenu);
+
+
+
+
+
+
