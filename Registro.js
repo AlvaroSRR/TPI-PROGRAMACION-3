@@ -7,6 +7,7 @@ form.addEventListener('submit', async (e) => {
 
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
+    const telefono = document.getElementById("telefono").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
@@ -14,6 +15,7 @@ form.addEventListener('submit', async (e) => {
     const nuevoUsuario = {
         nombre: nombre,
         apellido: apellido,
+        telefono: telefono,
         email: email,
         password: password,
     };
