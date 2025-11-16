@@ -18,8 +18,10 @@ async function cargarMenu() {
         if (inputUsuario == d.email) {
             if (inputPassword == d.password) {
                 if (d.role == 'role 1') {
+                    localStorage.setItem("lsUsuario", JSON.stringify(d));
                     menuADM();
                 } else {
+                    localStorage.setItem("lsUsuario", JSON.stringify(d));
                     menuUsuario();
                 }
             } else {
