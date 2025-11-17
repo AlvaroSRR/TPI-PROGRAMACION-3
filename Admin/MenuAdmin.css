@@ -10,40 +10,52 @@ body {
     font-family: Arial, sans-serif;
 }
 
-h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #333;
-}
-
-#menuAdmi .contenedor, #MenuGestionMedicos .contenedor {
+.contenedor {
+    background-color: #f8f8f8;
+    padding: 25px;
+    width: 330px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f8f8;
-    padding: 25px;
-    width: 350px;
 }
 
-input, button {
-    width: 70%;
-    padding: 10px;
-    border: 1.5px solid #a48df0;
-    border-radius: 6px;
-    background-color: #faf8ff;
-    color: #6f4bc6;
-    margin-bottom: 15px;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
 }
 
 .boton {
-    background-color: #6d4df7;
+    width: 100%;
+    padding: 10px 0;
+    margin: 8px 0;
+    font-size: 15px;
+    font-weight: bold;
     color: white;
+    background-color: #6d4df7;
     border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
 .boton:hover {
     background-color: #5b3de0;
+}
+
+.boton-volver {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #6d4df7;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.boton-volver:hover {
+    text-decoration: underline;
 }

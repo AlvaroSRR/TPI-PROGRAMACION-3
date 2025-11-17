@@ -1,37 +1,87 @@
-html {
-    background-color: blue;
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef2ff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.contenedor {
+    background-color: #f8f8f8;
+    padding: 22px;
+    width: 380px;
+    border-radius: 12px;
+    text-align: center;
 }
 
 h1 {
-    color: white;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 18px;
 }
 
 #tablaTurnos {
-    width: 39%;
-    border-collapse: collapse;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;  
+    margin-bottom: 18px;
 }
 
-#tablaTurnos th, #tablaTurnos td {
-    border: 1px solid black;
+#tablaTurnos thead th {
+    background-color: #6d4df7;
+    color: white;
     padding: 8px;
-    text-align: left;
+    font-size: 13px;
+    border-radius: 6px;
 }
 
-#tablaTurnos th, td {
-    background-color: lightgray;
+#tablaTurnos tbody tr {
+    background-color: #faf8ff;
+    border-radius: 8px;
+    transition: 0.15s;
 }
 
-#consultarTurno{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+#tablaTurnos tbody tr:hover {
+    background-color: #f0edff;
+}
+
+#tablaTurnos td {
+    padding: 8px;
+    font-size: 13px;
+    color: #333;
+}
+
+#tablaTurnos button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+#tablaTurnos button:hover {
+    background-color: #ff5252;
 }
 
 .boton {
-    width: 200px;
-    height: 30px;
-    font-size: 16px;
-    font-weight: bolder;
-    margin-top: 20px;
+    display: block;
+    margin: 15px auto 0 auto;
+    text-align: center;
+    color: #6d4df7;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
 }
- 
+
+.boton:hover {
+    text-decoration: underline;
+}
