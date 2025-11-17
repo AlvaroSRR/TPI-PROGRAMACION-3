@@ -28,16 +28,14 @@
             </select>
 
             <label for="dia">Día disponible</label>
-            <select id="dia">
-                <option value="" disabled selected>Elegir...</option>
-            </select>
+            <ul id="dia"></ul>
 
-            <label for="hora">Horario</label>
-            <select id="hora" disabled>
-                <option value="" disabled selected>Elegir...</option>
-            </select>
+            <label for="fechaTurno">Seleccioná la fecha del turno:</label>
+            <input type="date" id="fechaTurno" name="fechaTurno" min=>
 
-            <button class="boton" id="btnConfirmar">Confirmar Turno</button>
+        
+
+            <button class="boton" id="btnConfirmar" disabled>Solicitar Turno</button>
             <button class="boton cancelar" onclick="location.href='/Usuario/MenuPaciente.html'">Cancelar</button>
 
         </div>

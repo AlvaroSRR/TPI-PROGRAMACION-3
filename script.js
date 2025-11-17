@@ -17,7 +17,7 @@ async function cargarMenu() {
     for (let d of datos) {
         if (inputUsuario == d.email) {
             if (inputPassword == d.password) {
-                if (d.role == 'role 1') {
+                if (d.role == 'admin') {
                     localStorage.setItem("lsUsuario", JSON.stringify(d));
                     menuADM();
                 } else {

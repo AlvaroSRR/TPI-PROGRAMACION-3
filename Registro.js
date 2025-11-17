@@ -18,6 +18,7 @@ form.addEventListener('submit', async (e) => {
         telefono: telefono,
         email: email,
         password: password,
+        role: "usuario"
     };
 
     // enviar datos a la api
