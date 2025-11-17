@@ -41,7 +41,7 @@ async function cargarSelectMedicos() {
     lista.forEach(med => {
         if (med.especialidad == optEspecialidad) {
             const opt = document.createElement("option");
-            opt.value = med.nombre;
+            opt.value = med.id; // guardo el id
             opt.textContent = med.nombre;
             select.appendChild(opt);
         }
@@ -52,11 +52,12 @@ async function cargarSelectMedicos() {
 // carga los dias en base al medico
 async function cargarDias() {
     let diasMedico = document.getElementById('medico').value;
+    //alert(diasMedico)
     let lista = document.getElementById('dia');
     lista.innerHTML = '';
     let datos = await cargarMedicos();
     for (let n of datos) {
-        if (n.nombre == diasMedico) {
+        if (n.id == diasMedico) {
             for (let d of n.diasDisponibles) {
                 let optDia = document.createElement('li')
                 optDia.innerHTML = `
@@ -86,33 +87,56 @@ cargarEspecialidad();
 
 async function controlarDia(){
     let fecha = document.getElementById('fechaTurno').value;
-    let diaFecha = await diaSemana(fecha);
+    let diaFecha = diaSemana(fecha);
     let medico = await cargarMedicos();
     let selMedico = document.getElementById('medico').value;
     for(let m of medico){
-        if (m.nombre == selMedico){
-            //controlar esto
-            alert(m.diasDisponibles.dia.value)
-            alert(diaFecha.value)
-            if(!m.diasDisponibles.dia.includes(diaFecha)){
+        if (m.id == selMedico){
+            let dias = m.diasDisponibles.map(d => d.dia); // carga todos los dias dentro de una variable
+            if(!dias.includes(diaFecha)){
+                btnSolicitarTurno.disabled = true;
                 return alert('no Coincide')
             }
+            alert("coincide")
+            btnSolicitarTurno.disabled = false;
         }
     }
 }
 
-async function diaSemana(f) {
+function diaSemana(f) {
     const dias = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
-    return dias[new Date(f+"T00:00:00").getDay];
+    return dias[new Date(f+"T00:00:00").getDay()];
     
 }
 
 let fechaTurno = document.getElementById('fechaTurno');
 fechaTurno.addEventListener('change',controlarDia);
 
+async function solicitarTurno(){
+    let dato= JSON.parse(localStorage.getItem('lsUsuario'));
 
+    let solicitudTurno = {
+        patientId: dato.id,
+        doctorId: document.getElementById('medico').value,
+        fecha: document.getElementById('fechaTurno').value,
+        hora: '00:00 Hs',
+        estado: "Pendiente"
+    }
+    const respuesta = await fetch('https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(solicitudTurno),
+        });
+          if (!respuesta.ok) {
+            alert('Error al solicitar turno');
+        }else{ alert('Solicitud enviada')};
 
+}
 
+const btnSolicitarTurno = document.getElementById('btnConfirmar');
+btnSolicitarTurno.addEventListener('click',solicitarTurno);
 
 
 

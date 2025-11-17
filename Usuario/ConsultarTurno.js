@@ -19,14 +19,14 @@ async function cancelar(dato) {
 }
 
 async function cargarCitas() {
-    const respuesta = await fetch('https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments');
+    const respuesta = await fetch(`https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments`);
     const datos = await respuesta.json();
     let idPaciente = JSON.parse(localStorage.getItem('lsUsuario'));
     const tabla = document.getElementById('tablaCitas');
     tabla.innerHTML = ""; // limpiar antes de cargar
 
     for (let d of datos) {
-        if (d.patientId == idPaciente) {    // filtro por id 
+        if (d.patientId == idPaciente.id) {    // filtro por id 
             const fila = document.createElement('tr');
 
             fila.innerHTML = `
