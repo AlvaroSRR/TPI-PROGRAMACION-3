@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-   <script src="/script.js" defer></script>
+    <script src="/Admin/ActualizarBajaUsuario.js" defer></script>
 </head>
+
 <body>
-    <button class="boton" id="btnVolverMenuUsuariosADM">Cancelar</button>
+    <section id="buscador">
+        <div>
+            <input type="email" id="inputEmail" placeholder="Ingrese email a Buscar">
+            <input type="button" value="Buscar" id="btnBuscar">
+            <button class="boton" onclick="location.href='/Admin/MenuAdmin.html'">Cancelar</button>
+        </div>
+    </section>
+    <section id="resultados" hidden>
+        <h1>Perfil Usuario</h1>
+        <div class="campo">
+            <label for="id">Id:</label>
+            <input class="datoPerfil" type="text" id="id" disabled>
+        </div>
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input class="datoPerfil" type="text" id="nombre" placeholder="Datos Paciente">
+        </div>
+        <div class="campo">
+            <label for="apellido">Apellido:</label>
+            <input class="datoPerfil" type="text" id="apellido" placeholder="Datos Paciente">
+        </div>
+        <div class="campo">
+            <label for="telefono">Teléfono:</label>
+            <input class="datoPerfil" type="text" id="telefono" placeholder="Datos Paciente">
+        </div>
+        <div class="campo">
+            <label for="email">Email:</label>
+            <input class="" type="email" id="email" placeholder="Datos Paciente" disabled>
+        </div>
+        <div class="campo">
+            <label for="password">Password:</label>
+            <input class="datoPerfil" type="text" id="password" placeholder="password">
+        </div>
+        <div class="campo">
+            <label for="rol">Rol:</label>
+            <input class="datoPerfil" type="text" id="rol" placeholder="rol">
+        </div>
+        <div class="botones">
+            <button class="guardar" id="guardar">Guardar Cambios</button>
+            <button class="eliminar" id="eliminar">Eliminar</button>
+        </div>
+    </section>
 </body>
+
 </html>

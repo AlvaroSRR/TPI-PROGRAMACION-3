@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="/script.js" defer></script>
+    <script src="AltaMedicos.js" defer></script>
+    <title>Alta medicos</title>
 </head>
+
 <body>
-    <button class="boton" id="btnVolverGestionMedicosADM">Cancelar</button>
+    <h1>Registrar Medico</h1>
+    <form id="formMedico">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="apellido" required><br><br>
+
+        <label for="especialidad">Especialidad:</label>
+        <input type="text" id="especialidad" name="especialidad" required><br><br>
+
+
+
+        <h1>Días y horarios</h1>
+
+        <label for="dia">Día:</label>
+        <select id="dia">
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+        </select><br><br>
+
+        <label for="hora">Horario (00:00):</label>
+        <input type="time" id="hora">
+
+        <button type="button" id="btnAddHorario">Elegir Horario</button>
+
+        <h4>Horarios del dia seleccionado:</h4>
+        <ul id="listaHorarios"></ul>
+
+        <button type="button" id="btnAgregarDia">Agregar Día</button>
+
+        <h1>Días agregados:</h1>
+
+        <ul id="listaDias"></ul>
+
+       
+
+
+        <button type="submit">Registrar</button>
+
+    </form>
+    <button class="boton" onclick="location.href='/Admin/GestionMedicos.html'">Cancelar</button>
 </body>
+
 </html>

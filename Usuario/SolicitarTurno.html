@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="SolicitarTurno.css">
-    <script src="/script.js" defer></script>
     <script src="usuario.js" defer></script>
 
     <title>SolicitarTurno</title>
@@ -24,12 +23,12 @@
             </select>
 
             <label for="medico">Médico</label>
-            <select id="medico" disabled>
+            <select id="medico" name="medico">
                 <option value="" disabled selected>Elegir...</option>
             </select>
 
             <label for="dia">Día disponible</label>
-            <select id="dia" disabled>
+            <select id="dia">
                 <option value="" disabled selected>Elegir...</option>
             </select>
 
@@ -38,8 +37,8 @@
                 <option value="" disabled selected>Elegir...</option>
             </select>
 
-            <button class="boton" id="confirmarTurno" disabled>Confirmar Turno</button>
-            <button class="boton" id="cancelarTurno">Cancelar</button>
+            <button class="boton" id="btnConfirmar">Confirmar Turno</button>
+            <button class="boton cancelar" onclick="location.href='/Usuario/MenuPaciente.html'">Cancelar</button>
 
         </div>
 

@@ -18,8 +18,10 @@ async function cargarMenu() {
         if (inputUsuario == d.email) {
             if (inputPassword == d.password) {
                 if (d.role == 'role 1') {
+                    localStorage.setItem("lsUsuario", JSON.stringify(d));
                     menuADM();
                 } else {
+                    localStorage.setItem("lsUsuario", JSON.stringify(d));
                     menuUsuario();
                 }
             } else {
@@ -34,13 +36,19 @@ async function cargarMenu() {
 
 }
 
-function menuUsuario(){
-    window.location.href= '/Usuario/MenuPaciente.html';
+function menuUsuario() {
+    window.location.href = '/Usuario/MenuPaciente.html';
 }
 
-function menuADM(){
-    window.location.href='/Admin/MenuAdmin.html';
+function menuADM() {
+    window.location.href = '/Admin/MenuAdmin.html';
 }
 
 const btnLogin = document.getElementById('btnIniciarSesion');
 btnLogin.addEventListener('click', cargarMenu);
+
+
+
+
+
+

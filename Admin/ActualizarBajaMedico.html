@@ -5,11 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="/script.js" defer></script>
+    <script src="/Admin/ActualizarBajaMedico.js" defer></script>
 </head>
 
 <body>
-    <button class="boton" id="btnVolverMenuADM">Cancelar</button>
+        <section id="buscador">
+        <div>
+            <input type="email" id="inputEmail" placeholder="Ingrese email a Buscar">
+            <input type="button" value="Buscar" id="btnBuscar">
+            <button class="boton" onclick="location.href='/Admin/MenuAdmin.html'">Cancelar</button>
+        </div>
+    </section>
+    <section id="resultados" hidden>
+        <h1>Perfil Usuario</h1>
+        <div class="campo">
+            <label for="id">Id:</label>
+            <input class="datoPerfil" type="text" id="id" disabled>
+        </div>
+        <div class="campo">
+            <label for="nombre">Nombre:</label>
+            <input class="datoPerfil" type="text" id="nombre" placeholder="Datos Paciente">
+        </div>
+        <div class="campo">
+            <label for="apellido">Apellido:</label>
+            <input class="datoPerfil" type="text" id="apellido" placeholder="Datos Paciente">
+        </div>
+        <div class="campo">
+            <label for="especialidad">Especialidad:</label>
+            <input class="datoPerfil" type="text" id="especialidad" placeholder="Datos Paciente">
+        </div>
+        <ul id="dias"></ul>
+        <div class="botones">
+            <button class="guardar" id="guardar">Guardar Cambios</button>
+            <button class="eliminar" id="eliminar">Eliminar</button>
+        </div>
+    </section>
 </body>
-
+    
 </html>

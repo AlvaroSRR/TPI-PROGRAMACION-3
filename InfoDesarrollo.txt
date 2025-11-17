@@ -1,0 +1,15 @@
+-Login Funciona
+-Crear Usuario Funciona
+-Navegabilidad Funciona
+
+// Usuario
+-Ver Perfil Funciona
+-Solicitar Turno Incompleto
+-Consultar Turno Incompleto
+
+// Admin
+
+-Gestion Turnos Funciona
+-Actualizar/Baja Usuario Funciona
+-Actualizar/Baja Medico Funciona Eliminar, Modificar funciona, pero falta poder modificar dias y horario
+-Alta Medico Funciona
