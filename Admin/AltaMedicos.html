@@ -5,48 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="AltaMedicos.js" defer></script>
+    <link rel="stylesheet" href="/Admin/altaMedicos.css">
     <title>Alta medicos</title>
 </head>
 
 <body>
-    <h1>Registrar Medico</h1>
-    <form id="formMedico">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+    <header>
+        <nav class="navbar">
+            <img src='../FondoBlancoo.png' class="nav-logo">
+            <span class="nav-titulo">Gestión Clínica</span>
+        </nav>
+    </header>
+    <section class="contenedor">
+        <div id="borde">
+            <h1>Registrar Medico</h1>
+            <form id="formMedico">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
 
-        <label for="apellido">Apellido:</label>
-        <input type="text" name="apellido" id="apellido" required><br><br>
+                <label for="apellido">Apellido:</label>
+                <input type="text" name="apellido" id="apellido" required><br><br>
 
-        <label for="especialidad">Especialidad:</label>
-        <input type="text" id="especialidad" name="especialidad" required><br><br>
-
-
-
-        <h1>Días y horarios</h1>
-
-        <label for="dia">Día:</label>
-        <select id="dia">
-            <option value="Lunes">Lunes</option>
-            <option value="Martes">Martes</option>
-            <option value="Miércoles">Miércoles</option>
-            <option value="Jueves">Jueves</option>
-            <option value="Viernes">Viernes</option>
-        </select><br><br>
+                <label for="especialidad">Especialidad:</label>
+                <input type="text" id="especialidad" name="especialidad" required><br><br>
 
 
-        <button type="button" id="btnAgregarDia">Agregar Día</button>
 
-        <h1>Días agregados:</h1>
+                <h1>Días y horarios</h1>
 
-        <ul id="listaDias"></ul>
+                <label for="dia">Día:</label>
+                <select id="dia">
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miércoles">Miércoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                </select><br><br>
 
-       
+
+                <button type="button" id="btnAgregarDia">Agregar Día</button>
+
+                <h1>Días agregados:</h1>
+
+                <ul id="listaDias"></ul>
 
 
-        <button type="submit">Registrar</button>
 
-    </form>
-    <button class="boton" onclick="location.href='/Admin/GestionMedicos.html'">Cancelar</button>
+
+                <button type="submit">Registrar</button>
+
+            </form>
+            <button class="boton" onclick="location.href='/Admin/GestionMedicos.html'">Cancelar</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
+    </footer>
 </body>
 
 </html>

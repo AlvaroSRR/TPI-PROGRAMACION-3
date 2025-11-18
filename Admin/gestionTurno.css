@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #e0f3ff, #b3d9f2);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2c3e50;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav-logo {
+    height: 100%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.nav-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#tablaTurnos {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 100px 20px 70px;
+    overflow-y: auto;
+    max-height: calc(100vh - 180px);
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    /* table-layout: auto; */
+    border: 1px solid #e8edf3;
+}
+
+thead {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 2px 3px;
+    text-align: center;
+    border-bottom: 1px solid #e8edf3;
+    font-size: 15px;  
+}
+
+tr:hover {
+    background-color: #eef6fb;
+}
+
+.boton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 16px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background: none;
+    color: #3498db;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .2s ease;
+    font-size: 16px;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+/* botonVolver */
+#btnVolver {
+    display: block;
+    margin: 20px auto;
+    background: none;
+    border: none;
+    color: #3498db;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btnVolver:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Confirmar */
+button[id^="confirmar"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button[id^="confirmar"]:hover {
+    background-color: #2980b9;
+}
+
+/* Cancelar */
+button[id^="cancelar"] {
+    background-color: #95a5a6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button[id^="cancelar"]:hover {
+    background-color: #7f8c8d;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+

@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <img src='../FondoBlancoo.png' class="nav-logo">
+            <span class="nav-titulo">Gestión Clínica</span>
+        </nav>
+    </header>
     <section id="tablaTurnos">
         <table border="1">
             <thead>
@@ -20,12 +26,17 @@
                     <th>Paciente</th>
                     <th>Médico</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody id="tablaCitas"></tbody>
         </table>
     </section>
-    <button class="boton" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
+    <button class="boton" id="btnVolver" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
+
+    <footer class="footer">
+        <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
+    </footer>
 </body>
 
 </html>
