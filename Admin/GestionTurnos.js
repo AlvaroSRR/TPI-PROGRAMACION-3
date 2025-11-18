@@ -2,7 +2,8 @@
 async function cancelar(dato) {
     let id = dato;
     const estadoConfirmado = {
-        estado: "Cancelado"
+        estado: "Cancelado",
+        hora: "--:--"
     }
 
     const respuesta = await fetch(`https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments/${id}`, {
@@ -21,25 +22,64 @@ async function cancelar(dato) {
 
 async function confirmar(dato) {
     let id = dato;
-    const estadoConfirmado = {
-        estado: "Confirmado"
-    }
+    let nuevoHorario = await horario(dato);
+    //alert(nuevoHorario)
+    if (nuevoHorario === "cancelar") {
+        alert("No hay Turnos disponibles, el Turno se Cancelara");
+        cancelar(dato);
 
-    const respuesta = await fetch(`https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments/${id}`, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(estadoConfirmado),
-    });
-    if (!respuesta.ok) {
-        alert('Falla al Actualizar')
+    } else {
+        const estadoConfirmado = {
+            estado: "Confirmado",
+            hora: nuevoHorario
+        }
+
+        const respuesta = await fetch(`https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(estadoConfirmado),
+        });
+        if (!respuesta.ok) {
+            alert('Falla al Actualizar')
+        }
+        let btnConfirmar = document.getElementById(`confirmar${id}`);
+        btnConfirmar.hidden = true;
+        location.reload();
+
     }
-    let btnConfirmar = document.getElementById(`confirmar${id}`);
-    btnConfirmar.hidden = true;
-    location.reload();
     //cargarCitas();
 }
+
+//////////PRUEBA HORA/////////////
+function calcularHora(i) {
+    let horario = ["08:00 hs", "09:00 hs", "10:00 hs", "11:00 hs", "12:00 hs", "14:00 hs", "15:00 hs", "16:00 hs", "17:00 hs"];
+    return (horario[i]);
+}
+async function horario(turno) {
+    let dt = await fetch(`https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments/${turno}`)
+    let datTurno = await dt.json();
+    const respuesta = await fetch('https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments');
+    const datos = await respuesta.json();
+    let contHora = 0;
+    for (let d of datos) {
+        if (d.fecha == datTurno.fecha && d.doctorId == datTurno.doctorId && d.estado === "Confirmado") {
+            contHora++;
+        }
+    }
+    if (contHora <= 8) {
+        let horaTurno = calcularHora(contHora);
+        return horaTurno;
+
+    } else {
+        return ("cancelar");
+    }
+
+}
+
+//////////////////////
+
 async function cargarCitas() {
 
     const respuesta = await fetch('https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments');
@@ -49,7 +89,6 @@ async function cargarCitas() {
     tabla.innerHTML = ""; // limpiar antes de cargar
 
     for (let d of datos) {
-
         const fila = document.createElement('tr');
 
         fila.innerHTML = `
@@ -66,7 +105,7 @@ async function cargarCitas() {
         `;
         tabla.appendChild(fila);
     }
-    
+
     let grafico;
 
     function generarDashboard(datos) {
@@ -98,13 +137,13 @@ async function cargarCitas() {
                 plugins: {
                     legend: { position: 'bottom' },
                     title: { display: true, text: 'Distribución de Estados de Turnos' },
-                    
+
                 }
             }
         });
     }
 
-generarDashboard(datos);
+    generarDashboard(datos);
 
 }
 

@@ -1,4 +1,6 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -17,20 +19,31 @@ body {
   display: flex;
   align-items: center;
   padding: 0 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   z-index: 10;
 }
-.nav-logo { height: 100%; object-fit: cover; margin-right: 15px; }
-.nav-titulo { font-size: 24px; font-weight: bold; color: #2c3e50; }
+
+.nav-logo {
+  height: 100%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.nav-titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
 
 .contenedor {
-  width: 500px;              
+  width: 500px;
   max-width: 90vw;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -47,7 +60,8 @@ h1 {
   color: #2c3e50;
 }
 
-#buscador, #resultados {
+#buscador,
+#resultados {
   background: #ffffff;
   border: 1px solid #e8edf3;
   border-radius: 10px;
@@ -60,11 +74,13 @@ h1 {
   gap: 10px;
   margin: 10px 0;
 }
+
 .campo label {
   width: 120px;
   font-weight: 600;
   color: #34495e;
 }
+
 .campo input {
   flex: 1;
 }
@@ -79,7 +95,10 @@ input.datoPerfil {
   background-color: #f7fbff;
   color: #2c3e50;
 }
-input::placeholder { color: #6b7d90; }
+
+input::placeholder {
+  color: #6b7d90;
+}
 
 .boton {
   display: inline-block;
@@ -91,7 +110,11 @@ input::placeholder { color: #6b7d90; }
   cursor: pointer;
   padding: 0;
 }
-.boton:hover { color: #2980b9; text-decoration: underline; }
+
+.boton:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
 
 #btnBuscar {
   background-color: #3498db;
@@ -105,13 +128,17 @@ input::placeholder { color: #6b7d90; }
   margin-top: 10px;
   width: 100%;
 }
-#btnBuscar:hover { background-color: #2980b9; }
+
+#btnBuscar:hover {
+  background-color: #2980b9;
+}
 
 .botones {
   display: flex;
   gap: 10px;
   margin-top: 12px;
 }
+
 .botones button {
   flex: 1;
   border: none;
@@ -134,6 +161,7 @@ input::placeholder { color: #6b7d90; }
 .botones .eliminar {
   background-color: #95a5a6;
 }
+
 .botones .eliminar:hover {
   background-color: #7f8c8d;
 }
@@ -147,7 +175,129 @@ input::placeholder { color: #6b7d90; }
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
-  bottom: 0; left: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* RESPONSIVE TABLET */
+
+
+@media (max-width: 1024px) {
+
+  .contenedor {
+    width: 420px;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .campo label {
+    width: 110px;
+    font-size: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input.datoPerfil {
+    padding: 9px 10px;
+    font-size: 15px;
+  }
+
+  #btnBuscar {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .botones button {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .nav-titulo {
+    font-size: 20px;
+  }
+}
+
+/*  RESPONSIVE MOBILE */
+
+
+@media (max-width: 600px) {
+
+  .contenedor {
+    width: 90%;
+    padding: 15px;
+    margin-top: 120px;
+  }
+
+  h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  #buscador,
+  #resultados {
+    padding: 10px;
+  }
+
+  .campo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .campo label {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input.datoPerfil {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #btnBuscar {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+
+  .botones button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .navbar {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .nav-titulo {
+    font-size: 18px;
+  }
+
+  .nav-logo {
+    height: 80%;
+  }
+
+  .footer {
+    font-size: 12px;
+    height: 45px;
+  }
 }

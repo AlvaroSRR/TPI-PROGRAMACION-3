@@ -4,43 +4,40 @@ html, body {
     background-color: #eef2ff;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    padding: 20px 0;
+    min-height: 100vh;
 }
 
-.contenedor {
-    background-color: #f8f8f8;
-    padding: 22px;
-    width: 380px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 18px;
-}
 
 #tablaTurnos {
+    width: 90%;
+    max-width: 800px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow-x: auto; 
+}
+
+
+#tablaTurnos table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 8px;  
-    margin-bottom: 18px;
+    border-spacing: 0 8px;
 }
 
 #tablaTurnos thead th {
     background-color: #6d4df7;
     color: white;
     padding: 8px;
-    font-size: 13px;
+    font-size: 14px;
     border-radius: 6px;
 }
 
 #tablaTurnos tbody tr {
     background-color: #faf8ff;
-    border-radius: 8px;
     transition: 0.15s;
 }
 
@@ -53,6 +50,7 @@ h1 {
     font-size: 13px;
     color: #333;
 }
+
 
 #tablaTurnos button {
     background-color: #ff6b6b;
@@ -70,18 +68,93 @@ h1 {
     background-color: #ff5252;
 }
 
+
 .boton {
     display: block;
-    margin: 15px auto 0 auto;
-    text-align: center;
+    margin-top: 18px;
     color: #6d4df7;
     font-weight: bold;
     cursor: pointer;
     background: none;
     border: none;
-    padding: 0;
+    padding: 6px 0;
+    text-align: center;
+    font-size: 15px;
 }
 
 .boton:hover {
     text-decoration: underline;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 900px) {
+    #tablaTurnos {
+        width: 95%;
+        padding: 18px;
+    }
+
+    #tablaTurnos thead th {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    #tablaTurnos td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .boton {
+        font-size: 14px;
+    }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 0;
+    }
+
+    #tablaTurnos {
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    #tablaTurnos thead {
+        display: none; 
+    }
+
+
+    #tablaTurnos tbody tr {
+        display: block;
+        margin-bottom: 12px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #tablaTurnos td {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px;
+        font-size: 14px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    #tablaTurnos td:last-child {
+        border-bottom: none;
+    }
+
+    
+    #tablaTurnos td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+    }
+
+    .boton {
+        font-size: 15px;
+        width: 100%;
+    }
 }

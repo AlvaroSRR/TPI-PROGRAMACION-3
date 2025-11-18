@@ -23,10 +23,10 @@ function mostrarDatos(datos) {
     let especialidad = document.getElementById('especialidad');
     especialidad.value = datos.especialidad;
     let dias = document.getElementById('dias');
-
+    dias.innerHTML = `DIA`
     for (let i of datos.diasDisponibles) {
         let dia = document.createElement('li');
-        dia.innerHTML = `DIA: ${i.dia}`;
+        dia.innerHTML = `${i.dia}`;
         dias.append(dia);
     }
 }
