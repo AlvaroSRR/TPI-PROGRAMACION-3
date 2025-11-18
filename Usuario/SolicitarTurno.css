@@ -14,18 +14,24 @@ body {
     padding: 25px;
     width: 350px;
     border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-h1 {
+h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
 label {
     font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 10px;
 }
 
-select {
+select,
+input[type="date"] {
     width: 100%;
     padding: 10px;
     margin: 8px 0 15px;
@@ -36,21 +42,24 @@ select {
     font-size: 15px;
 }
 
-#horarios-container {
-    margin-bottom: 20px;
+ul#dia {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 15px;
 }
 
-.horarios {
-    display: block;
-    padding: 8px;
+ul#dia li {
+    background: #faf8ff;
     border: 1px solid #d2c7ff;
-    border-radius: 6px;
+    padding: 8px;
     margin-bottom: 10px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: 0.15s ease;
 }
 
-.horarios input {
-    margin-right: 10px;
+ul#dia li:hover {
+    background: #f0edff;
 }
 
 .boton {
@@ -63,6 +72,7 @@ select {
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 10px;
+    transition: 0.2s;
 }
 
 .boton:hover {
@@ -78,3 +88,67 @@ select {
 }
 
 
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1024px) {
+
+    .contenedor {
+        width: 380px;
+        padding: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    select, input[type="date"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .boton {
+        font-size: 17px;
+        padding: 13px;
+    }
+}
+
+/* RESPONSIVE CELULAR */
+
+@media (max-width: 480px) {
+
+    body {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .contenedor {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    select,
+    input[type="date"] {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    ul#dia li {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .boton {
+        padding: 14px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+}

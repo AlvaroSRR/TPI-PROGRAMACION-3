@@ -21,7 +21,7 @@ h1 {
     padding: 25px;
     width: 330px;
     border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .campo {
@@ -73,4 +73,72 @@ button {
 
 button:hover {
     background-color: #5b3de0;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 1024px) {
+
+    #perfilUsuario {
+        width: 380px;
+        padding: 28px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    label {
+        font-size: 15px;
+        width: 110px;
+    }
+
+    input {
+        font-size: 16px;
+        padding: 9px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 7px 0;
+    }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 480px) {
+
+    body {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    #perfilUsuario {
+        width: 90%;
+        padding: 22px;
+    }
+
+    .campo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    label {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
 }

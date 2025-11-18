@@ -116,3 +116,74 @@ input[type="button"].boton:hover {
     bottom: 0;
     left: 0;
 }
+
+/*  RESPONSIVE TABLET */
+
+@media (max-width: 1024px) {
+
+    .contenedor {
+        width: 420px;
+        max-width: 92vw;
+        padding: 18px;
+    }
+
+    .contenedor h1 {
+        font-size: 20px;
+    }
+
+    input[type="button"].boton {
+        padding: 11px;
+        font-size: 15px;
+    }
+
+    .boton-volver {
+        font-size: 15px;
+    }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+
+    body {
+        padding-top: 80px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .navbar {
+        height: 70px;
+        padding: 0 12px;
+    }
+
+    .nav-titulo {
+        font-size: 20px;
+    }
+
+    .contenedor {
+        width: 90vw;
+        margin-top: 90px;
+        padding: 15px;
+    }
+
+    #borde {
+        padding: 14px;
+    }
+
+    .contenedor h1 {
+        font-size: 19px;
+    }
+
+    input[type="button"].boton {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .boton-volver {
+        font-size: 14px;
+    }
+
+    .footer {
+        height: 45px;
+        font-size: 12px;
+    }
+}
