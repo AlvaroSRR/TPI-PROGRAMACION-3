@@ -39,6 +39,7 @@ async function confirmar(dato) {
     cargarCitas();
 }
 async function cargarCitas() {
+
     const respuesta = await fetch('https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments');
     const datos = await respuesta.json();
 
@@ -63,10 +64,52 @@ async function cargarCitas() {
         `;
         tabla.appendChild(fila);
     }
+    
+    let grafico;
+
+    function generarDashboard(datos) {
+        let confirmados = 0;
+        let cancelados = 0;
+        let pendientes = 0;
+
+        datos.forEach(d => {
+            if (d.estado === "Confirmado") confirmados++;
+            else if (d.estado === "Cancelado") cancelados++;
+            else pendientes++;
+        });
+
+        const graficot = document.getElementById('graficoEstados').getContext('2d');
+
+        if (grafico) grafico.destroy();
+
+        grafico = new Chart(graficot, {
+            type: 'pie',
+            data: {
+                labels: ['Confirmado', 'Cancelado', 'Pendiente'],
+                datasets: [{
+                    data: [confirmados, cancelados, pendientes],
+                    backgroundColor: ['#4CAF50', '#F44336', '#FFC107'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    title: { display: true, text: 'Distribución de Estados de Turnos' },
+                    
+                }
+            }
+        });
+    }
+
+generarDashboard(datos);
 
 }
 
+
 cargarCitas(); // cargar automáticamente
+
+
 
 
 // Faltar agregar un filtro, para que muestre los turnos por estado/medico/paciente

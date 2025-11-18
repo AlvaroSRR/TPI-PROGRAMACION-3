@@ -4,24 +4,20 @@ const btnAgregarDia = document.getElementById("btnAgregarDia");
 
 const listaDias = document.getElementById("listaDias");
 
-let diasDisponibles = []; 
+let diasDisponibles = [];
 
 
 
 
 btnAgregarDia.addEventListener("click", () => {
     const dia = document.getElementById("dia").value;
-
-    
-
     diasDisponibles.push({
         dia
     });
-
-    renderDias();
+    limpiarDias();
 });
 
-function renderDias() {
+function limpiarDias() {
     listaDias.innerHTML = "";
 
     diasDisponibles.forEach(d => {
@@ -52,13 +48,12 @@ form.addEventListener("submit", async (e) => {
             body: JSON.stringify(nuevoMedico)
         });
 
-        if (!resp.ok) throw new Error("Error al crear medico");
+        if (!resp.ok) alert("Error al crear medico");
 
         alert("Medico registrado con exito");
         location.reload();
 
     } catch (error) {
-        console.error(error);
         alert("Error al registrar medico");
     }
 });
