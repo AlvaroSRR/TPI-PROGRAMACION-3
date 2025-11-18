@@ -1,0 +1,164 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: linear-gradient(to bottom right, #e0f3ff, #b3d9f2);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+
+#registro {
+  width: 600px;
+  max-width: 90vw;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 25px 25px 35px;
+  margin-top: 40px;
+}
+
+#registro h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+
+form label {
+  font-weight: 600;
+  color: #34495e;
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #a6c8e8;
+  border-radius: 8px;
+  background-color: #f7fbff;
+  color: #2c3e50;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+form input::placeholder {
+  color: #6b7d90;
+}
+
+
+form button[type="submit"] {
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color .2s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+form button[type="button"] {
+  width: 100%;
+  background-color: #95aac4;
+  color: white;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 12px;
+  transition: background-color .2s ease;
+}
+
+form button[type="button"]:hover {
+  background-color: #7c91ac;
+}
+
+
+/* RESPONSIVE  TABLET */
+
+@media (max-width: 900px) {
+  #registro {
+    width: 85%;
+    padding: 22px;
+  }
+
+  #registro h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  form button[type="submit"],
+  form button[type="button"] {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/*  RESPONSIVE CELULAR */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px;
+    background-attachment: scroll; 
+  }
+
+  #registro {
+    width: 100%;
+    padding: 20px 18px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: none; 
+  }
+
+  #registro h1 {
+    font-size: 20px;
+    margin-bottom: 18px;
+  }
+
+  form label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    font-size: 14px;
+    padding: 9px;
+    border-radius: 7px;
+  }
+
+  form button[type="submit"],
+  form button[type="button"] {
+    width: 100%;
+    font-size: 15px;
+    padding: 11px;
+    border-radius: 7px;
+  }
+}

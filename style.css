@@ -88,3 +88,63 @@ body {
 #btnRegistro:hover {
     background-color: #5b92c7;
 }
+
+
+/* RESPONSIVE TABLET */
+@media (max-width: 900px) {
+    .contenedor {
+        width: 80%;
+        padding: 30px 20px;
+    }
+
+    .contenedor input[type="text"],
+    .contenedor input[type="password"],
+    #btnIniciarSesion,
+    #btnRegistro {
+        width: 85%;
+    }
+
+    .contenedor h1 {
+        font-size: 22px;
+    }
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 600px) {
+
+    html {
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll; 
+    }
+
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    .contenedor {
+        width: 100%;
+        padding: 25px 20px;
+        gap: 12px;
+        box-shadow: none; 
+    }
+
+    .logo {
+        width: 60%;
+    }
+
+    .contenedor h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .contenedor input[type="text"],
+    .contenedor input[type="password"],
+    #btnIniciarSesion,
+    #btnRegistro {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px;
+    }
+}
