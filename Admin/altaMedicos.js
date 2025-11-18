@@ -6,9 +6,6 @@ const listaDias = document.getElementById("listaDias");
 
 let diasDisponibles = [];
 
-
-
-
 btnAgregarDia.addEventListener("click", () => {
     const dia = document.getElementById("dia").value;
     if (!diasDisponibles.some(d => d.dia === dia)) {
@@ -33,28 +30,46 @@ form.addEventListener("submit", async (e) => {
 
     const nombre = document.getElementById("nombre").value;
     const apellido = document.getElementById("apellido").value;
+    const dni = document.getElementById("dni").value;
     const especialidad = document.getElementById("especialidad").value;
 
-    const nuevoMedico = {
-        nombre,
-        apellido,
-        especialidad,
-        diasDisponibles
-    };
-
     try {
-        const resp = await fetch("https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(nuevoMedico)
-        });
+        const controlDni = await fetch('https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor?dni=');
+        const dniExistentes = await controlDni.json();
 
-        if (!resp.ok) alert("Error al crear medico");
+        const dniYaRegistrado = dniExistentes.some(usuarios => usuarios.dni === dni);
 
-        alert("Medico registrado con exito");
-        location.reload();
+        if (dniYaRegistrado) {
+            alert('El dni ya está registrado. Por favor, utilice otro email.');
+            return;
+        }
+
+        const nuevoMedico = {
+            nombre,
+            apellido,
+            dni,
+            especialidad,
+            diasDisponibles
+        };
+
+        try {
+            const resp = await fetch("https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(nuevoMedico)
+            });
+
+            if (!resp.ok) alert("Error al crear medico");
+
+            alert("Medico registrado con exito");
+            location.reload();
+
+        } catch (error) {
+            alert("Error al registrar medico");
+        }
 
     } catch (error) {
-        alert("Error al registrar medico");
-    }
-});
+        alert("Error al verificar DNI");
+    } 
+
+}); 
