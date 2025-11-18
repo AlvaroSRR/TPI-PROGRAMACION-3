@@ -1,5 +1,9 @@
 async function cargarPerfil() {
-    const datoUsuario = JSON.parse(localStorage.getItem("lsUsuario"));
+    const usuarioLS = JSON.parse(localStorage.getItem("lsUsuario"));
+    let lsId = usuarioLS.id;
+    let usuario = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/users/${lsId}`);
+    const datoUsuario = await usuario.json();
+    
     console.log(datoUsuario);
     const nombre = document.getElementById('nombre');
     nombre.value = datoUsuario.nombre;
@@ -34,8 +38,6 @@ async function actualizarDatos() {
         telefono: document.getElementById('telefono').value,
         password: document.getElementById('password').value,
     }
-
-    alert(id)
     const respuesta = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/users/${id}`, {
         method: 'PUT',
         headers: {
@@ -47,7 +49,7 @@ async function actualizarDatos() {
         alert('Falla al Actualizar')
     }
     alert('Actualizado Correctamente, relogee');
-    window.location.href = "/main.html";
+    location.reload();
 
 }
 

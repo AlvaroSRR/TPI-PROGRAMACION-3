@@ -1,9 +1,9 @@
 async function buscarMedico() {
     const respuesta = await fetch('https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor');
     const dato = await respuesta.json();
-    const nombre = document.getElementById('inputEmail').value;
+    const dni = document.getElementById('inputEmail').value;
     for (let e of dato) {
-        if (e.nombre === nombre) {
+        if (e.dni == dni) {
             mostrarDatos(e);
         }
     }
@@ -14,6 +14,8 @@ function mostrarDatos(datos) {
     s.hidden = false;
     let idUsuario = document.getElementById('id');
     idUsuario.value = datos.id;
+    let dni = document.getElementById('dni');
+    dni.value = datos.dni;
     let nombre = document.getElementById('nombre');
     nombre.value = datos.nombre;
     let apellido = document.getElementById('apellido');
@@ -25,13 +27,6 @@ function mostrarDatos(datos) {
     for (let i of datos.diasDisponibles) {
         let dia = document.createElement('li');
         dia.innerHTML = `DIA: ${i.dia}`;
-        let horarios = document.createElement('ul');
-        for (let h of i.horarios) {
-            let hora = document.createElement('li');
-            hora.innerHTML = `hora: ${h}`;
-            horarios.append(hora);
-        }
-        dia.append(horarios);
         dias.append(dia);
     }
 }

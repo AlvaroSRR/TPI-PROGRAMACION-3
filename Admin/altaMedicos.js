@@ -11,10 +11,11 @@ let diasDisponibles = [];
 
 btnAgregarDia.addEventListener("click", () => {
     const dia = document.getElementById("dia").value;
-    diasDisponibles.push({
-        dia
-    });
-    limpiarDias();
+    if (!diasDisponibles.some(d => d.dia === dia)) {
+        diasDisponibles.push({ dia });
+        limpiarDias();
+    } else { alert('Dia Repetido') }
+
 });
 
 function limpiarDias() {

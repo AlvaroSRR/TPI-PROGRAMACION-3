@@ -11,5 +11,8 @@
 
 -Gestion Turnos Funciona
 -Actualizar/Baja Usuario Funciona
--Actualizar/Baja Medico Funciona Eliminar, Modificar funciona, pero falta poder modificar dias y horario
+-Actualizar/Baja Medico Funciona Eliminar.
 -Alta Medico Funciona
+
+
+Linea comentada en actualizarBaja.css [ Linea 41 ]

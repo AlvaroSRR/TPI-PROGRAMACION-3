@@ -15,7 +15,8 @@ async function cancelar(dato) {
     if (!respuesta.ok) {
         alert('Falla al Actualizar')
     }
-    cargarCitas();
+    location.reload();
+    //cargarCitas();
 }
 
 async function confirmar(dato) {
@@ -36,7 +37,8 @@ async function confirmar(dato) {
     }
     let btnConfirmar = document.getElementById(`confirmar${id}`);
     btnConfirmar.hidden = true;
-    cargarCitas();
+    location.reload();
+    //cargarCitas();
 }
 async function cargarCitas() {
 
@@ -59,7 +61,7 @@ async function cargarCitas() {
             <td>${d.estado}</td>    
             ${d.estado !== "Confirmado" && d.estado !== "Cancelado"
                 ? `<button class="boton" onclick="confirmar(${d.id})" id="confirmar${d.id}">Confirmar</button>`
-                : `<button class="boton" disabled>${d.estado}</button>`}
+                : ``}
             <button class="boton" onclick="cancelar(${d.id})" id='cancelar${d.id}'>Cancelar</button>
         `;
         tabla.appendChild(fila);
