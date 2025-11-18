@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="MenuAdmin.css">
     <title>Menu Administrador</title>
 </head>
+
 <body>
+    <header>
+        <nav class="navbar">
+            <img src='../FondoBlancoo.png' class="nav-logo">
+            <span class="nav-titulo">Gestión Clínica</span>
+        </nav>
+    </header>
     <section id="menuAdmi">
         <div class="contenedor">
+            <div id="borde">
             <h1>Menú Administrador</h1>
-            <input type="button" value="Gestionar Medico" onclick="location.href='/Admin/GestionMedicos.html'" class="boton">
-            <input type="button" value="Gestionar Usuario" onclick="location.href='/Admin/ActualizarBajaUsuario.html'"  class="boton">
-            <input type="button" value="Gestionar Turnos" onclick="location.href='/Admin/GestionTurno.html'" class="boton">
+            <input type="button" value="Gestionar Medico" onclick="location.href='/Admin/GestionMedicos.html'"
+                class="boton">
+            <input type="button" value="Gestionar Usuario" onclick="location.href='/Admin/ActualizarBajaUsuario.html'"
+                class="boton">
+            <input type="button" value="Gestionar Turnos" onclick="location.href='/Admin/GestionTurno.html'"
+                class="boton">
             <input type="button" value="Cerrar Sesion" onclick="location.href='/main.html'" class="boton">
+            </div>
         </div>
     </section>
+    <footer class="footer">
+        <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
+    </footer>
+
 </body>
+
 </html>

@@ -9,49 +9,60 @@
 </head>
 
 <body>
-    <section id="buscador">
-        <div>
-            <h1>Baja de Usuario</h1>
-            <input type="email" id="inputEmail" placeholder="Ingrese email a Buscar">
-            <input type="button" value="Buscar" id="btnBuscar">
-            <button class="boton" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
-        </div>
+    <header>
+        <nav class="navbar">
+            <img src='../FondoBlancoo.png' class="nav-logo">
+            <span class="nav-titulo">Gestión Clínica</span>
+        </nav>
+    </header>
+    <section class="contenedor">
+        <section id="buscador">
+            <div>
+                <h1>Baja de Usuario</h1>
+                <input type="email" id="inputEmail" placeholder="Ingrese email a Buscar">
+                <input type="button" value="Buscar" id="btnBuscar">
+                <button class="boton" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
+            </div>
+        </section>
+        <section id="resultados" hidden>
+            <h1>Perfil Usuario</h1>
+            <div class="campo">
+                <label for="id">Id:</label>
+                <input class="datoPerfil" type="text" id="id" disabled>
+            </div>
+            <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input class="datoPerfil" type="text" id="nombre" placeholder="Datos Paciente">
+            </div>
+            <div class="campo">
+                <label for="apellido">Apellido:</label>
+                <input class="datoPerfil" type="text" id="apellido" placeholder="Datos Paciente">
+            </div>
+            <div class="campo">
+                <label for="telefono">Teléfono:</label>
+                <input class="datoPerfil" type="text" id="telefono" placeholder="Datos Paciente">
+            </div>
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input class="" type="email" id="email" placeholder="Datos Paciente" disabled>
+            </div>
+            <div class="campo">
+                <label for="password">Password:</label>
+                <input class="datoPerfil" type="text" id="password" placeholder="password">
+            </div>
+            <div class="campo">
+                <label for="rol">Rol:</label>
+                <input class="datoPerfil" type="text" id="rol" placeholder="rol">
+            </div>
+            <div class="botones">
+                <button class="guardar" id="guardar">Guardar Cambios</button>
+                <button class="eliminar" id="eliminar">Eliminar</button>
+            </div>
+        </section>
     </section>
-    <section id="resultados" hidden>
-        <h1>Perfil Usuario</h1>
-        <div class="campo">
-            <label for="id">Id:</label>
-            <input class="datoPerfil" type="text" id="id" disabled>
-        </div>
-        <div class="campo">
-            <label for="nombre">Nombre:</label>
-            <input class="datoPerfil" type="text" id="nombre" placeholder="Datos Paciente">
-        </div>
-        <div class="campo">
-            <label for="apellido">Apellido:</label>
-            <input class="datoPerfil" type="text" id="apellido" placeholder="Datos Paciente">
-        </div>
-        <div class="campo">
-            <label for="telefono">Teléfono:</label>
-            <input class="datoPerfil" type="text" id="telefono" placeholder="Datos Paciente">
-        </div>
-        <div class="campo">
-            <label for="email">Email:</label>
-            <input class="" type="email" id="email" placeholder="Datos Paciente" disabled>
-        </div>
-        <div class="campo">
-            <label for="password">Password:</label>
-            <input class="datoPerfil" type="text" id="password" placeholder="password">
-        </div>
-        <div class="campo">
-            <label for="rol">Rol:</label>
-            <input class="datoPerfil" type="text" id="rol" placeholder="rol">
-        </div>
-        <div class="botones">
-            <button class="guardar" id="guardar">Guardar Cambios</button>
-            <button class="eliminar" id="eliminar">Eliminar</button>
-        </div>
-    </section>
+    <footer class="footer">
+        <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
+    </footer>
 </body>
 
 </html>
