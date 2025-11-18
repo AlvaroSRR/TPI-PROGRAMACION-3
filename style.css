@@ -1,35 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html {
-    background-color: blue;
-    background-image: url(https://media.a24.com/p/4a0bdc8159941a2ce1e9442a6c6dcfb5/adjuntos/296/imagenes/009/067/0009067694/1200x675/smart/la-historia-hasbullajpg.jpg);
+    background-image: url('Clinica_novaSalud.png');
+    background-repeat: no-repeat;       
+    background-size: cover;           
+    background-position: center 40%; 
+    background-attachment: fixed;      
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .contenedor {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    gap: 20px;
+    gap: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    text-align: center;
 }
 
-#inputUsuario, #inputPassword, #btnIniciarSesion, #btnRegistrarse {
-    width: 200px;
-    height: 30px;
-    font-size: 16px;
-    font-weight: bolder;
+.logo {
+    width: 70%;
+    height: auto;
+    margin: 0 auto; 
 }
 
-#btnIniciarSesion, #btnRegistrarse {
-    cursor: pointer;
-    background-color: lightgrey;
+.contenedor h1 {
     color: black;
-    border: none;
-    border-radius: 5px;
-
+    margin-bottom: 20px;
+    font-size: 26px;
 }
 
-#contenedor, h1 {
+.contenedor input[type="text"],
+.contenedor input[type="password"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1.5px solid #3a6ea5;
+    background-color: #f0f4ff;
+    color: #1f3c88;
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#btnIniciarSesion {
+    background-color: #3a6ea5;
     color: white;
-    margin-bottom: 20px;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#btnIniciarSesion:hover {
+    background-color: #2f5b8c;
+}
+
+#btnRegistro {
+    background-color: #6ca8e0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#btnRegistro:hover {
+    background-color: #5b92c7;
 }
