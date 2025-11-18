@@ -16,3 +16,4 @@
 
 
 Linea comentada en actualizarBaja.css [ Linea 41 ]
+Falta ver el modificar dias a los medicos en [actualizarBajaMedico.html]

@@ -3,7 +3,8 @@
 }
 
 body {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 50px ;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -44,7 +45,7 @@ body {
     justify-content: center;
     padding: 100px 20px 70px;
     overflow-y: auto;
-    max-height: calc(100vh - 180px);
+    /*max-height: calc(100vh - 180px);*/
 }
 
 table {

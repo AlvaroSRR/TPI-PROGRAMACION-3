@@ -2,7 +2,8 @@
 async function cancelar(dato) {
     let id = dato;
     const estadoConfirmado = {
-        estado: "Cancelado"
+        estado: "Cancelado",
+        hora: "--:--"
     }
 
     const respuesta = await fetch(`https://690b51d26ad3beba00f4675b.mockapi.io/api/appointments/${id}`, {
