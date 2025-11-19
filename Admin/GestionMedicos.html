@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion Médico</title>
     <link rel="stylesheet" href="MenuAdmin.css">
+    <script src="/Admin/gestionMedicos.js" defer></script>
 </head>
 
 <body>
@@ -24,6 +25,19 @@
             <button class="boton-volver" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
             </div>
         </div>
+    </section>
+     <section id="medicosTodos">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>DNI</th>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>especialidad</th>
+                </tr>
+            </thead>
+            <tbody id="tablaCitas"></tbody>
+        </table>
     </section>
      <footer class="footer">
         <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>

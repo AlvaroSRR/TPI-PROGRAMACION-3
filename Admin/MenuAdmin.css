@@ -5,6 +5,7 @@
 body {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     background: linear-gradient(to bottom right, #e0f3ff, #b3d9f2);
     align-items: center;
     min-height: calc(100vh - 130px);
@@ -101,6 +102,47 @@ input[type="button"].boton:hover {
     color: #2980b9;
     text-decoration: underline;
 }
+/* toco aca */
+#medicosTodos {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    /*max-height: calc(100vh - 180px); /* bloquear */
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    table-layout: auto;
+    border: 1px solid #e8edf3;
+}
+thead {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+th,
+td {
+    padding: 2px 3px;
+    text-align: center;
+    border-bottom: 1px solid #e8edf3;
+    font-size: 15px;  
+}
+
+tr:hover {
+    background-color: #eef6fb;
+}
+
+
+/* hasta aca */
+
 
 .footer {
     width: 100%;
