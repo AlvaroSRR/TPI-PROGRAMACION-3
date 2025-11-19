@@ -1,7 +1,8 @@
 * { box-sizing: border-box; }
 
 body {
-  margin: 0;
+  margin-top: 80px;
+  margin-bottom: 50px;
   background: linear-gradient(to bottom right, #e0f3ff, #b3d9f2);
   display: flex;
   flex-direction: column;
@@ -9,6 +10,20 @@ body {
   align-items: center;
 }
 
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 10;
+}
+.nav-logo { height: 100%; object-fit: cover; margin-right: 15px; }
+.nav-titulo { font-size: 24px; font-weight: bold; color: #2c3e50; }
 
 #registro {
   width: 600px;
@@ -18,6 +33,7 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding: 25px 25px 35px;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 #registro h1 {
@@ -91,12 +107,26 @@ form button[type="button"]:hover {
 }
 
 
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #ffffff;
+  color: #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  bottom: 0; left: 0;
+}
 /* RESPONSIVE  TABLET */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   #registro {
     width: 85%;
     padding: 22px;
+    margin-bottom: 40px;
   }
 
   #registro h1 {
@@ -120,17 +150,16 @@ form button[type="button"]:hover {
 
 /*  RESPONSIVE CELULAR */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
   body {
-    padding: 15px;
     background-attachment: scroll; 
   }
 
   #registro {
-    width: 100%;
+    width: 90%;
+    margin-bottom: 40px;
     padding: 20px 18px;
-    margin-top: 20px;
     border-radius: 10px;
     box-shadow: none; 
   }

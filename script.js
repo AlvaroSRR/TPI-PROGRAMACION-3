@@ -9,29 +9,30 @@ async function cargarDatos() {
 // MENU PRINCIPAL
 
 async function cargarMenu() {
-    // conexion api datos usuarios
     let inputUsuario = document.getElementById("inputUsuario").value;
     let inputPassword = document.getElementById("inputPassword").value;
-    // controlar que el usuario y password correspondan al administrador
     let datos = await cargarDatos();
+    let estado = 0;
     for (let d of datos) {
         if (inputUsuario == d.email) {
+            estado=0;
             if (inputPassword == d.password) {
+                estado=0;
                 if (d.role == 'admin') {
                     localStorage.setItem("lsUsuario", JSON.stringify(d));
-                    menuADM();
+                    return menuADM();
                 } else {
-                    localStorage.setItem("lsUsuario", JSON.stringify(d));
-                    menuUsuario();
+                    if (d.role == "usuario") {
+                        localStorage.setItem("lsUsuario", JSON.stringify(d));
+                        return menuUsuario();
+                    }
+
                 }
-            } else {
-                //alert('Password Incorrecto');
-            }
-        }
-        else {
-            //alert('Usuario no encontrado')
-            // agregar control de usuario
-        }
+            } else { return alert('Password Incorrecta') }
+        } else { estado = 1; }
+    }
+    if (estado == 1) {
+        alert('Usuario No Registrado')
     }
 
 }

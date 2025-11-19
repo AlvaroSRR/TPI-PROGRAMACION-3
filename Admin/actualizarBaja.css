@@ -58,6 +58,7 @@ h1 {
   margin: 0 0 12px;
   font-size: 22px;
   color: #2c3e50;
+  text-align: center;
 }
 
 #buscador,
@@ -230,7 +231,7 @@ input::placeholder {
 /*  RESPONSIVE MOBILE */
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
   .contenedor {
     width: 90%;
@@ -240,7 +241,6 @@ input::placeholder {
 
   h1 {
     font-size: 18px;
-    text-align: center;
   }
 
   #buscador,

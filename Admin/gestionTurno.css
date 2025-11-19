@@ -45,7 +45,7 @@ body {
     justify-content: center;
     padding: 100px 20px 70px;
     overflow-y: auto;
-    /*max-height: calc(100vh - 180px);*/
+    /*max-height: calc(100vh - 180px); /* bloquear */
 }
 
 table {
@@ -57,7 +57,7 @@ table {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    /* table-layout: auto; */
+    table-layout: auto;
     border: 1px solid #e8edf3;
 }
 
@@ -167,12 +167,17 @@ h2 {
 }
 
 
+
+
 /* RESPONSIVE TABLET  */
 
 @media (max-width: 1024px) {
     #tablaTurnos {
+        flex-direction: column;
+        height: auto;
         padding: 100px 10px 70px;
     }
+
 
     table {
         max-width: 95%;
@@ -219,6 +224,7 @@ h2 {
 
     table {
         font-size: 13px;
+        height: 100%;
         width: 100%;
     }
 
@@ -226,12 +232,7 @@ h2 {
         padding: 4px 3px;
         font-size: 12px;
     }
-
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
+ 
 
     #dashboard {
         width: 100%;

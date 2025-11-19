@@ -2,10 +2,16 @@ async function buscarUsuario() {
     const respuesta = await fetch('https://6913e692f34a2ff1170d7f79.mockapi.io/api/users');
     const dato = await respuesta.json();
     const email = document.getElementById('inputEmail').value;
+    let estado = 0;
     for (let e of dato) {
+        estado = 1;
         if (e.email === email) {
-            mostrarDatos(e);
+            estado = 0;
+            return mostrarDatos(e);
         }
+    }
+    if (estado == 1) {
+        return alert("email no encontrado");
     }
 }
 
@@ -37,8 +43,6 @@ async function actualizarDatos() {
         password: document.getElementById('password').value,
         role: document.getElementById('rol').value
     }
-
-    alert(id)
     const respuesta = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/users/${id}`, {
         method: 'PUT',
         headers: {
@@ -51,7 +55,6 @@ async function actualizarDatos() {
     }
     alert('Actualizado Correctamente');
     buscarUsuario();
-
 }
 
 async function eliminar() {
