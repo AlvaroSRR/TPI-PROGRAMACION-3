@@ -62,7 +62,7 @@ h1 {
 }
 
 #buscador,
-#resultados {
+#resultados, #borde {
   background: #ffffff;
   border: 1px solid #e8edf3;
   border-radius: 10px;
@@ -88,6 +88,7 @@ h1 {
 
 input[type="text"],
 input[type="email"],
+.contenedor input[type="password"],
 input.datoPerfil {
   width: 100%;
   padding: 10px 12px;
@@ -95,6 +96,15 @@ input.datoPerfil {
   border-radius: 8px;
   background-color: #f7fbff;
   color: #2c3e50;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input.datoPerfil:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
 }
 
 input::placeholder {

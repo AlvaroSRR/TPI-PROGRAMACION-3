@@ -23,8 +23,25 @@
                 <input type="button" value="Alta" onclick="location.href='/Admin/AltaMedicos.html'" class="boton">
                 <input type="button" value="Baja/Actualizar" onclick="location.href='/Admin/ActualizarBajaMedico.html'"
                     class="boton">
+<<<<<<< HEAD
+=======
+                <input type="button" id="btnMedico" value="Médicos"  class="boton">
+>>>>>>> 2836fe705b755075805bc54d75e49a0482c9aa42
                 <button class="boton-volver" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
             </div>
+            <section id="medicosTodos" hidden>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>DNI</th>
+                            <th>nombre</th>
+                            <th>apellido</th>
+                            <th>especialidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCitas"></tbody>
+                </table>
+            </section>
         </div>
         <section id="medicosTodos">
             <table border="1">

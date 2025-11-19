@@ -5,19 +5,36 @@ async function cargarCitas() {
     tabla.innerHTML = ""; // limpiar antes de cargar
 
     for (let d of datos) {
-        
-            const fila = document.createElement('tr');
 
-            fila.innerHTML = `
+        const fila = document.createElement('tr');
+
+        fila.innerHTML = `
             <td>${d.dni}</td>
             <td>${d.nombre}</td>
             <td>${d.apellido}</td>
             <td>${d.especialidad}</td>
   
         `;
-            tabla.appendChild(fila);
-        }
-
+        tabla.appendChild(fila);
     }
 
+}
+
 cargarCitas();
+
+function mostrar() {
+    const medico1 = document.getElementById('medicosTodos');
+    if(  medico1.hidden = true){
+        alert('A');
+        return medico1.hidden = false;
+    }
+    else{
+        // medico.hidden = false;
+        alert('B');
+    }
+   // alterna entre true y false
+   
+}
+
+const btnMedico = document.getElementById('btnMedico');
+btnMedico.addEventListener("click", mostrar);
