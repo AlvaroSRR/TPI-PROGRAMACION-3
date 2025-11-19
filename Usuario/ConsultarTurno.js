@@ -28,14 +28,21 @@ async function cargarCitas() {
 
     for (let d of datos) {
         if (d.patientId == idPaciente.id) {    // filtro por id 
+            // nombre medico
+            const medicoR = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor/${d.doctorId}`);
+            const medicoD = await medicoR.json();
+            // nombre paciente
+            const pacienteR = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor/${d.patientId}`);
+            const pacienteD = await pacienteR.json();
+
             const fila = document.createElement('tr');
 
             fila.innerHTML = `
             <td>${d.id}</td>
             <td>${d.fecha}</td>
             <td>${d.hora}</td>
-            <td>${d.patientId}</td>
-            <td>${d.doctorId}</td>
+            <td>${pacienteD.nombre}</td>
+            <td>${medicoD.nombre}</td>
             <td>${d.estado}</td>    
 
             <button class="boton" onclick="cancelar(${d.id})" id='cancelar${d.id}'>Cancelar</button>
