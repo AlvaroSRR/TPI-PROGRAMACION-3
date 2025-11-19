@@ -25,7 +25,6 @@ cargarCitas();
 function mostrar() {
     const medico1 = document.getElementById('medicosLista');
     medico1.hidden = !medico1.hidden
-   
 }
 
 const btnMedico = document.getElementById('btnMedicos');

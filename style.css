@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url('Clinica_novaSalud.png');
+    background-repeat: no-repeat;       
+    background-size: cover;           
+    background-position: center 40%; 
+    background-attachment: fixed;      
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.logo {
+    width: 70%;
+    height: auto;
+    margin: 0 auto; 
+}
+
+.contenedor h1 {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.contenedor input[type="text"],
+.contenedor input[type="password"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1.5px solid #3a6ea5;
+    background-color: #f0f4ff;
+    color: #1f3c88;
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#btnIniciarSesion {
+    background-color: #3a6ea5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#btnIniciarSesion:hover {
+    background-color: #2f5b8c;
+}
+
+#btnRegistro {
+    background-color: #6ca8e0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#btnRegistro:hover {
+    background-color: #5b92c7;
+}
+
+
+/* RESPONSIVE TABLET */
+@media (max-width: 1024px) {
+    
+    .contenedor {
+        width: 100%;
+        padding: 30px 20px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .contenedor input[type="text"],
+    .contenedor input[type="password"],
+    #btnIniciarSesion,
+    #btnRegistro {
+        width: 85%;
+    }
+
+    .contenedor h1 {
+        font-size: 22px;
+    }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+
+   /* html {
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll; 
+    }*/
+
+    body {
+        padding: 20px;
+        height: auto;
+    }
+
+    .contenedor {
+        width: 100%;
+        padding: 30px 20px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 60%;
+    }
+
+    .contenedor h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .contenedor input[type="text"],
+    .contenedor input[type="password"],
+    #btnIniciarSesion,
+    #btnRegistro {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px;
+    }
+}
