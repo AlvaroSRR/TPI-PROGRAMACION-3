@@ -32,7 +32,7 @@ async function cargarCitas() {
             const medicoR = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor/${d.doctorId}`);
             const medicoD = await medicoR.json();
             // nombre paciente
-            const pacienteR = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/doctor/${d.patientId}`);
+            const pacienteR = await fetch(`https://6913e692f34a2ff1170d7f79.mockapi.io/api/users/${d.patientId}`);
             const pacienteD = await pacienteR.json();
 
             const fila = document.createElement('tr');
