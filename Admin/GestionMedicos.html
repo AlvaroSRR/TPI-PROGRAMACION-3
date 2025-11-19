@@ -19,27 +19,30 @@
     <section id="MenuGestionMedicos">
         <div class="contenedor">
             <div id="borde">
-            <h1>Menú Gestión</h1>
-            <input type="button" value="Alta" onclick="location.href='/Admin/AltaMedicos.html'" class="boton">
-            <input type="button" value="Baja/Actualizar" onclick="location.href='/Admin/ActualizarBajaMedico.html'" class="boton">
-            <button class="boton-volver" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
+                <h1>Menú Gestión</h1>
+                <input type="button" value="Alta" onclick="location.href='/Admin/AltaMedicos.html'" class="boton">
+                <input type="button" value="Baja/Actualizar" onclick="location.href='/Admin/ActualizarBajaMedico.html'"
+                    class="boton">
+                <input type="button" id="btnMedico" value="Médicos"  class="boton">
+                <button class="boton-volver" onclick="location.href='/Admin/MenuAdmin.html'">Volver</button>
             </div>
+            <section id="medicosTodos" hidden>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>DNI</th>
+                            <th>nombre</th>
+                            <th>apellido</th>
+                            <th>especialidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaCitas"></tbody>
+                </table>
+            </section>
         </div>
     </section>
-     <section id="medicosTodos">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>DNI</th>
-                    <th>nombre</th>
-                    <th>apellido</th>
-                    <th>especialidad</th>
-                </tr>
-            </thead>
-            <tbody id="tablaCitas"></tbody>
-        </table>
-    </section>
-     <footer class="footer">
+
+    <footer class="footer">
         <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
     </footer>
 </body>
