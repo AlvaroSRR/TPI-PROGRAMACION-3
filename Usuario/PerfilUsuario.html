@@ -10,7 +10,12 @@
 </head>
 
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <img src='../FondoBlancoo.png' class="nav-logo">
+            <span class="nav-titulo">Autogestión Paciente</span>
+        </nav>
+    </header>
     <section id="perfilUsuario">
         <h1>Perfil Usuario</h1>
         <div class="campo">
@@ -29,16 +34,20 @@
             <label for="email">Email:</label>
             <input class="" type="email" id="email" placeholder="Datos Paciente" disabled>
         </div>
-         <div class="campo">
+        <div class="campo">
             <label for="password">Password:</label>
             <input class="datoPerfil" type="password" id="password" placeholder="password">
         </div>
         <div class="botones">
             <button class="boton" onclick="location.href='/Usuario/MenuPaciente.html'">Volver</button>
-            <button class="modificar" id="modificar">Modificar</button>  <!--- evento click, guardar en api --->
-            <button class="guardar" id="guardar" disabled>Guardar Cambios</button>  <!--- evento click, guardar en api --->
+            <button class="modificar" id="modificar">Modificar</button> <!--- evento click, guardar en api --->
+            <button class="guardar" id="guardar" disabled>Guardar Cambios</button>
+            <!--- evento click, guardar en api --->
         </div>
     </section>
+    <footer class="footer">
+        <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
+    </footer>
 </body>
 
 </html>

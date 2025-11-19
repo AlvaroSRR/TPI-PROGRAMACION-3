@@ -5,17 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="SolicitarTurno.css">
+    <link rel="stylesheet" href="/Admin/altaMedicos.css">
     <script src="usuario.js" defer></script>
 
     <title>SolicitarTurno</title>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <img src='../FondoBlancoo.png' class="nav-logo">
+            <span class="nav-titulo">Autogestión Paciente</span>
+        </nav>
+    </header>
     <section id="calendario-medico">
         <div class="contenedor">
+           <div id="borde">
 
-            <h2>Solicitar turno</h2>
+            <h1>Solicitar turno</h1>
 
             <label for="especialidad">Especialidad</label>
             <select id="especialidad">
@@ -33,10 +40,10 @@
             <label for="fechaTurno">Seleccioná la fecha del turno:</label>
             <input type="date" id="fechaTurno" name="fechaTurno" min=>
 
-        
 
-            <button class="boton" id="btnConfirmar" disabled>Solicitar Turno</button>
-            <button class="boton cancelar" onclick="location.href='/Usuario/MenuPaciente.html'">Volver</button>
+
+            <button id="btnConfirmar" disabled>Solicitar Turno</button>
+            <button class="boton" onclick="location.href='/Usuario/MenuPaciente.html'">Volver</button>
 
         </div>
 
@@ -45,7 +52,9 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
 
-
+    <footer class="footer">
+        <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
+    </footer>
 
 </body>
 

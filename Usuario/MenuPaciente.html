@@ -4,20 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="MenuPaciente.css">
+    <link rel="stylesheet" href="/Admin/MenuAdmin.css">
     <title>Menu Paciente</title>
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <img src='../FondoBlancoo.png' class="nav-logo">
+            <span class="nav-titulo">Autogestión Paciente</span>
+        </nav>
+    </header>
     <section id="menuPaciente">
         <div class="contenedor">
-            <h1>Menú Paciente</h1>
-            <input type="button" value="Ver Perfil" onclick="location.href='/Usuario/PerfilUsuario.html'" class="boton">
-            <input type="button" value="Solicitar Turno" onclick="location.href='/Usuario/SolicitarTurno.html'" class="boton">
-            <input type="button" value="Ver Turno" onclick="location.href='/Usuario/ConsultarTurno.html'" class="boton">
-            <input type="button" value="Cerrar Sesion" onclick="location.href='/main.html'" class="boton">
+            <div id="borde">
+                <h1>Menú Paciente</h1>
+                <input type="button" value="Ver Perfil" onclick="location.href='/Usuario/PerfilUsuario.html'"
+                    class="boton">
+                <input type="button" value="Solicitar Turno" onclick="location.href='/Usuario/SolicitarTurno.html'"
+                    class="boton">
+                <input type="button" value="Ver Turno" onclick="location.href='/Usuario/ConsultarTurno.html'"
+                    class="boton">
+                <input type="button" value="Cerrar Sesion" onclick="location.href='/main.html'" class="boton">
+            </div>
         </div>
     </section>
+    <footer class="footer">
+        <span>© 2025 Clínica NovaSalud - Sistema de Gestión</span>
+    </footer>
 </body>
 
 </html>
