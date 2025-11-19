@@ -23,18 +23,10 @@ async function cargarCitas() {
 cargarCitas();
 
 function mostrar() {
-    const medico1 = document.getElementById('medicosTodos');
-    if(  medico1.hidden = true){
-        alert('A');
-        return medico1.hidden = false;
-    }
-    else{
-        // medico.hidden = false;
-        alert('B');
-    }
-   // alterna entre true y false
+    const medico1 = document.getElementById('medicosLista');
+    medico1.hidden = !medico1.hidden
    
 }
 
-const btnMedico = document.getElementById('btnMedico');
+const btnMedico = document.getElementById('btnMedicos');
 btnMedico.addEventListener("click", mostrar);
