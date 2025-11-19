@@ -102,7 +102,7 @@ input::placeholder {
 }
 
 .boton {
-  display: inline-block;
+  /* display: inline-block; */
   margin-top: 10px;
   color: #3498db;
   font-weight: 600;
@@ -110,6 +110,9 @@ input::placeholder {
   border: none;
   cursor: pointer;
   padding: 0;
+  display: block;     
+  margin: 12px auto 0;     
+  text-align: center;
 }
 
 .boton:hover {
